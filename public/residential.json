@@ -1,0 +1,111 @@
+[
+    {
+      "property": "images/single_family_home.jpg",
+      "estate_title": "Spacious Single-Family Home",
+      "id": "001",
+      "segment_name": "Single-family home",
+      "description": "A beautiful single-family home with ample space for a growing family.",
+      "price": "$350,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "123 Oak Street, Anytown, USA",
+      "facilities": ["living room", "kitchen", "backyard"]
+    },
+    {
+      "property": "images/townhouse.jpg",
+      "estate_title": "Modern Townhouse",
+      "id": "002",
+      "segment_name": "Townhouse",
+      "description": "A sleek and modern townhouse located in a vibrant neighborhood.",
+      "price": "$450,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "456 Maple Avenue, Anycity, USA",
+      "facilities": ["living room", "kitchen", "garage"]
+    },
+    {
+      "property": "images/apartment.jpg",
+      "estate_title": "Urban Apartment",
+      "id": "003",
+      "segment_name": "Apartment",
+      "description": "A stylish apartment in a prime location, perfect for city living.",
+      "price": "$2,500/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "789 Pine Street, Anycity, USA",
+      "facilities": ["living room", "kitchen", "gym"]
+    },
+    {
+      "property": "images/student_housing.jpg",
+      "estate_title": "Student Housing Complex",
+      "id": "004",
+      "segment_name": "Student housing",
+      "description": "Affordable and comfortable student housing with study lounges and social areas.",
+      "price": "$700/month (per bed)",
+      "status": "rent",
+      "area": "Variable",
+      "location": "101 College Avenue, Anycity, USA",
+      "facilities": ["study room", "shared kitchen", "laundry"]
+    },
+    {
+      "property": "images/senior_living_community.jpg",
+      "estate_title": "Senior Living Community",
+      "id": "005",
+      "segment_name": "Senior living community",
+      "description": "A serene community designed for seniors, offering various amenities and care services.",
+      "price": "$4,000/month",
+      "status": "rent",
+      "area": "Varies",
+      "location": "55 Harmony Lane, Anycity, USA",
+      "facilities": ["community center", "garden", "assisted living services"]
+    },
+    {
+      "property": "images/vacation_rental.jpg",
+      "estate_title": "Luxury Vacation Rental",
+      "id": "006",
+      "segment_name": "Vacation rental",
+      "description": "A luxurious vacation rental with breathtaking views and top-notch amenities.",
+      "price": "$500/night",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "10 Oceanfront Drive, Anybeach, USA",
+      "facilities": ["ocean view balcony", "private pool", "gourmet kitchen"]
+    },
+    {
+      "property": "images/single_family_home2.jpg",
+      "estate_title": "Classic Family Home",
+      "id": "007",
+      "segment_name": "Single-family home",
+      "description": "A classic family home with a spacious yard, ideal for outdoor activities.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "2200 sq ft",
+      "location": "789 Elm Street, Anytown, USA",
+      "facilities": ["living room", "kitchen", "backyard"]
+    },
+    {
+      "property": "images/townhouse2.jpg",
+      "estate_title": "Cozy Townhouse",
+      "id": "008",
+      "segment_name": "Townhouse",
+      "description": "A cozy townhouse nestled in a quiet neighborhood, perfect for small families.",
+      "price": "$380,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "456 Cedar Lane, Anycity, USA",
+      "facilities": ["living room", "kitchen", "garage"]
+    },
+    {
+      "property": "images/apartment2.jpg",
+      "estate_title": "Downtown Apartment",
+      "id": "009",
+      "segment_name": "Apartment",
+      "description": "An apartment in the heart of downtown, offering convenience and modern living.",
+      "price": "$2,200/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "123 Main Street, Anycity, USA",
+      "facilities": ["living room", "kitchen", "gym"]
+    }
+  ]
+  
