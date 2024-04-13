@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root/Root";
-import Home from "../Pages/Home";
-import User_Update from "../Pages/User_Update";
-import Update_Profile from "../Pages/Update_Profile";
+import Home from "../Pages/Home/Home";
+import Update_Profile from "../Pages/Update_Profile/Update_Profile";
+import User_Update from "../Pages/User_Update/User_Update";
+
 
 const router = createBrowserRouter([
     {
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
         element:<Root></Root>,
         children:[
             {
-                path:'Home',
+                path:'/',
                 element:<Home></Home>
             },
             {

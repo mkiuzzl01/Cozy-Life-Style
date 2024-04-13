@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'Merriweather':['Merriweather', 'serif'],
+    }
   },
   plugins: [require("daisyui")],
 }
