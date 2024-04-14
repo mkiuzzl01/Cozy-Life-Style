@@ -1,4 +1,6 @@
-import { data } from "autoprefixer";
+import { LiaIdCard } from "react-icons/lia";
+import { FiTag } from "react-icons/fi";
+import { LuScale3D } from "react-icons/lu";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -16,16 +18,16 @@ const State_Card = ({ data }) => {
         </figure>
         <div className="card-body">
             <div className="flex justify-between border-b-2 border-dashed p-2">
-            <p className="">{id}</p>
-            <p className="">{price}</p>
-            <p className="">{status}</p>
-            <p className="">{area}</p>
+            <p className="flex items-center space-x-1"><span><LiaIdCard /></span><span>{id}</span></p>
+            <p className=""><span></span>{price}</p>
+            <p className="flex items-center space-x-1"><span><FiTag /></span><span>{status}</span></p>
+            <p className="flex items-center space-x-1"><span><LuScale3D /></span><span>{area}</span></p>
             </div>
           <h2 className="text-2xl font-bold font-Merriweather">{estate_title}</h2>
           <p className="text-lg font-medium">{segment_name}</p>
           <p>{description}</p>
           <div>
-            <p>{location}</p>
+            <p className="font-semibold">{location}</p>
             <div className=" mt-4">
             <p className="space-x-4 flex justify-between font-thin border-dotted border-y-2 p-1">{
                         facilities.map((facility,idx)=> 
