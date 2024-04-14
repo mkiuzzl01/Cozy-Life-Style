@@ -1,11 +1,33 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
+    const {registerUser} = useContext(AuthContext);
+
+    const handleRegister= e =>{
+        e.preventDefault()
+        const form = new FormData(e.currentTarget);
+        const Name = form.get('Name');
+        const Email = form.get('Email');
+        const PhotoURL = form.get('PhotoURL');
+        const Password = form.get('Password');
+        console.log(Name,Email,PhotoURL,Password);
+
+        registerUser(Email,Password,Name,PhotoURL)
+        .then(result=>{
+            console.log(result);
+            console.log('Register');
+        })
+        .catch(error=>{
+            console.error(error);
+        })
+    }
     return (
         <div className="flex justify-center">
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
           <h1 className="text-2xl font-bold text-center">Register</h1>
-          <form noValidate="" action="" className="space-y-6">
+          <form onSubmit={handleRegister} className="space-y-6">
             <div className="space-y-1 text-sm">
               <label
                 htmlFor="Name"
@@ -18,6 +40,7 @@ const Register = () => {
                 name="Name"
                 id="Name"
                 placeholder="Name"
+                required
                 className="w-full px-4 py-3 rounded-md border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 focus:border-violet-400 focus:dark:border-violet-600"
               />
             </div>
@@ -33,6 +56,7 @@ const Register = () => {
                 name="Email"
                 id="Email"
                 placeholder="Email"
+                required
                 className="w-full px-4 py-3 rounded-md border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 focus:border-violet-400 focus:dark:border-violet-600"
               />
             </div>
@@ -63,6 +87,7 @@ const Register = () => {
                 name="Password"
                 id="Password"
                 placeholder="Password"
+                required
                 className="w-full px-4 py-3 rounded-md border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 focus:border-violet-400 focus:dark:border-violet-600"
               />
              

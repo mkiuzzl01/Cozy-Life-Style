@@ -1,6 +1,19 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const logout = () => {
+    logOut()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   const navLink = (
     <>
       <NavLink to="/">Home</NavLink>
@@ -40,8 +53,22 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal space-x-4">{navLink}</ul>
       </div>
-      <div className="navbar-end">
-       <Link to='/LogIn'><button className="btn bg-[#99d1e9] border-none">LogIn</button></Link>
+      <div className="navbar-end space-x-2">
+        {user ? (
+          <>
+            <p className={`hover:${user?.email}`}>{user?.email}</p>
+            <img src={user?.photoURL} alt="" className="w-10 rounded-full" title={user?.displayName} />
+            <Link>
+              <button onClick={logout} className="btn bg-[#99d1e9] border-none">
+                LogOut
+              </button>
+            </Link>
+          </>
+        ) : (
+          <Link to="/LogIn">
+            <button className="btn bg-[#99d1e9] border-none">LogIn</button>
+          </Link>
+        )}
       </div>
     </div>
   );

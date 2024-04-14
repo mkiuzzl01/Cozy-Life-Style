@@ -1,6 +1,7 @@
 import { LiaIdCard } from "react-icons/lia";
 import { FiTag } from "react-icons/fi";
 import { LuScale3D } from "react-icons/lu";
+import { IoLocationSharp } from "react-icons/io5";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -27,7 +28,7 @@ const State_Card = ({ data }) => {
           <p className="text-lg font-medium">{segment_name}</p>
           <p>{description}</p>
           <div>
-            <p className="font-semibold">{location}</p>
+            <p className="flex items-center font-semibold"><span className=""><IoLocationSharp /></span> <span>{location}</span></p>
             <div className=" mt-4">
             <p className="space-x-4 flex justify-between font-thin border-dotted border-y-2 p-1">{
                         facilities.map((facility,idx)=> 

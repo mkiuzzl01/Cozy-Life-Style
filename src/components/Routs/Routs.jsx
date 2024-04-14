@@ -6,6 +6,7 @@ import User_Update from "../Pages/User_Update/User_Update";
 import State_Card_Details from "../Pages/State_Card-Details/State_Card_Details";
 import LogIn from "../Pages/LogIn/LogIn";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'State_Card_Details/:id',
-                element:<State_Card_Details></State_Card_Details>
+                element:<PrivateRoute></PrivateRoute>
             },
             {
                 path:'UpdateProfile',
