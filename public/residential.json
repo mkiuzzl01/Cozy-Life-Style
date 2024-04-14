@@ -1,6 +1,6 @@
 [
     {
-      "property": "images/single_family_home.jpg",
+      "property": "https://i.ibb.co/7JfGRSh/francesca-tosolini-l-LDh9-Jpp-H2c-unsplash.jpg",
       "estate_title": "Spacious Single-Family Home",
       "id": "001",
       "segment_name": "Single-family home",
@@ -12,7 +12,7 @@
       "facilities": ["living room", "kitchen", "backyard"]
     },
     {
-      "property": "images/townhouse.jpg",
+      "property": "https://i.ibb.co/W5CcfMS/luke-van-zyl-ko-H7-IVuw-RLw-unsplash.jpg",
       "estate_title": "Modern Townhouse",
       "id": "002",
       "segment_name": "Townhouse",
@@ -24,7 +24,7 @@
       "facilities": ["living room", "kitchen", "garage"]
     },
     {
-      "property": "images/apartment.jpg",
+      "property": "https://i.ibb.co/L6sf4xS/adrien-olichon-asxhi-Rr-Zw-Gs-unsplash.jpg",
       "estate_title": "Urban Apartment",
       "id": "003",
       "segment_name": "Apartment",
@@ -36,7 +36,7 @@
       "facilities": ["living room", "kitchen", "gym"]
     },
     {
-      "property": "images/student_housing.jpg",
+      "property": "https://i.ibb.co/yRJ7QpL/daniil-silantev-n-Bui-Lbz-j4-A-unsplash.jpg",
       "estate_title": "Student Housing Complex",
       "id": "004",
       "segment_name": "Student housing",
@@ -48,7 +48,7 @@
       "facilities": ["study room", "shared kitchen", "laundry"]
     },
     {
-      "property": "images/senior_living_community.jpg",
+      "property": "https://i.ibb.co/hZ5JXFK/kylie-lugo-t0-Bav-JY0-M-U-unsplash.jpg",
       "estate_title": "Senior Living Community",
       "id": "005",
       "segment_name": "Senior living community",
@@ -60,7 +60,7 @@
       "facilities": ["community center", "garden", "assisted living services"]
     },
     {
-      "property": "images/vacation_rental.jpg",
+      "property": "https://i.ibb.co/r4vRSs0/alexandre-chambon-aap-Semzfs-Ok-unsplash.jpg",
       "estate_title": "Luxury Vacation Rental",
       "id": "006",
       "segment_name": "Vacation rental",
@@ -72,7 +72,7 @@
       "facilities": ["ocean view balcony", "private pool", "gourmet kitchen"]
     },
     {
-      "property": "images/single_family_home2.jpg",
+      "property": "https://i.ibb.co/2nd0hQg/peter-boccia-v-QVWSCx8lb-Q-unsplash.jpg",
       "estate_title": "Classic Family Home",
       "id": "007",
       "segment_name": "Single-family home",
@@ -84,7 +84,7 @@
       "facilities": ["living room", "kitchen", "backyard"]
     },
     {
-      "property": "images/townhouse2.jpg",
+      "property": "https://i.ibb.co/YXgyPjJ/terrah-holly-pmhdkg-RCbt-E-unsplash.jpg",
       "estate_title": "Cozy Townhouse",
       "id": "008",
       "segment_name": "Townhouse",
@@ -96,7 +96,7 @@
       "facilities": ["living room", "kitchen", "garage"]
     },
     {
-      "property": "images/apartment2.jpg",
+      "property": "https://i.ibb.co/YN0Tk05/andra-c-taylor-jr-e-U8-Qjpm-FFKo-unsplash.jpg",
       "estate_title": "Downtown Apartment",
       "id": "009",
       "segment_name": "Apartment",

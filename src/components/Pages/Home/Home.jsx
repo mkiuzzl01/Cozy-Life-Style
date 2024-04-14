@@ -4,12 +4,11 @@ import { stateContext } from "../../Root/Root";
 import State_Card from "../State_Card/State_Card";
 const Home = () => {
     const stateInfo = useContext(stateContext);
-    console.log(stateInfo);
     return (
-        <div>
+        <div className="my-4">
             <Banner></Banner>
             <div className="mt-4">
-                <h1 className="text-3xl font-Merriweather">Latest _Properties</h1>
+                <h1 className="text-4xl font-Merriweather text-center font-bold">__Residential__</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-4" >
                 {

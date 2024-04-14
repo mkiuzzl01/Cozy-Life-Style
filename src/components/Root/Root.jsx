@@ -14,14 +14,13 @@ const Root = () => {
     .then(data=> setState(data));
   },[])
 
-  // const shareInfo = {
-  //   state,
-  // }
   return (
     <div>
       <stateContext.Provider value={state}>
-        <header className="max-w-7xl m-auto">
+        <header className="max-w-7xl m-auto sticky top-0 z-10">
+          <nav>
           <Navbar></Navbar>
+          </nav>
         </header>
         <main className="max-w-7xl m-auto min-h-[calc(100vh-284px)]">
           <Outlet></Outlet>

@@ -9,7 +9,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-[#0b4736] text-white sticky z-10">
+    <div className="navbar bg-[#0b4736] text-white rounded-b-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-black shadow bg-base-100 rounded-box w-52"
           >
             {navLink}
           </ul>
@@ -41,7 +41,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal space-x-4">{navLink}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <button className="btn bg-[#99d1e9] border-none">LogIn</button>
       </div>
     </div>
   );
