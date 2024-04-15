@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Layouts/Navbar";
 import Footer from "../Layouts/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Root = () => {
  
@@ -11,7 +13,8 @@ const Root = () => {
             <Navbar></Navbar>
           </nav>
         </header>
-        <main className="max-w-7xl m-auto min-h-[calc(100vh-284px)]">
+        <main className="max-w-7xl m-auto min-h-[calc(100vh-290px)]">
+        <ToastContainer />
           <Outlet></Outlet>
         </main>
         <footer>

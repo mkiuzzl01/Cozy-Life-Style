@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const LogIn = () => {
   const {logInUser,logInWithGoogle,logInWithGithub} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
 
 
   const handleLogIn = (e) => {
@@ -14,15 +15,14 @@ const LogIn = () => {
     const form = new FormData(e.currentTarget);
     const Email = form.get("Email");
     const Password = form.get("Password");
-    console.log(Email, Password);
 
     logInUser(Email,Password)
-    .then(result=>{
+    .then(()=>{
       // Navigate After Login
       navigate(location?.state ? location.state : '/' );
-
-      console.log(result);
-      console.log('LogIn Successful');
+      toast.success("Login Success!", {
+        position: "bottom-center"
+      });
     })
     .catch(error=>{
       console.error(error);
@@ -32,8 +32,12 @@ const LogIn = () => {
 
   const GoogleLogIn = ()=>{
     logInWithGoogle()
-    .then(result=>{
-      console.log(result);
+    .then(()=>{
+      // Navigate After Login
+      navigate(location?.state ? location.state : '/' );
+      toast.success("Login Success!", {
+        position: "bottom-center"
+      });
     })
     .catch(error=>{
       console.error(error);
@@ -42,8 +46,12 @@ const LogIn = () => {
 
   const githubLogIn = ()=>{
     logInWithGithub()
-    .then(result=>{
-      console.log(result);
+    .then(()=>{
+      // Navigate After Login
+      navigate(location?.state ? location.state : '/' );
+      toast.success("Login Success!", {
+        position: "bottom-center"
+      });
     })
     .catch(error=>{
       console.error(error);
@@ -93,7 +101,7 @@ const LogIn = () => {
           </div>
           <button className="block w-full p-3 text-center rounded-sm text-gray-900 dark:text-gray-50 bg-violet-400 dark:bg-violet-600">
             LogIn
-          </button>
+          </button> 
         </form>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-gray-700 dark:bg-gray-300"></div>

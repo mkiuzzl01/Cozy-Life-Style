@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
 import Update_Profile from "../Pages/Update_Profile/Update_Profile";
-import User_Update from "../Pages/User_Update/User_Update";
 import State_Card_Details from "../Pages/State_Card-Details/State_Card_Details";
 import LogIn from "../Pages/LogIn/LogIn";
 import Register from "../Pages/Register/Register";
 import axios from "axios";
 import ProtectedRoute from "./ProtectedRoute";
+import Contact_Us from "../Pages/Contact_Us/Contact_Us";
+import User_Profile from "../Pages/User_Profile/User_Profile";
 
 
 
@@ -36,19 +37,23 @@ const router = createBrowserRouter([
             },
             {
                 path:'/UpdateProfile',
-                element:<Update_Profile></Update_Profile>
+                element:<ProtectedRoute><Update_Profile></Update_Profile></ProtectedRoute>
             },
             {
                 path:'/UserProfile',
-                element:<User_Update></User_Update>
+                element:<ProtectedRoute><User_Profile></User_Profile></ProtectedRoute>
             },
             {
-                path:'LogIn',
+                path:'/LogIn',
                 element:<LogIn></LogIn>
             },
             {
-                path:'Register',
+                path:'/Register',
                 element:<Register></Register>
+            },
+            {
+                path:'Contact_Us',
+                element:<ProtectedRoute><Contact_Us></Contact_Us></ProtectedRoute>
             }
         ]
     }
