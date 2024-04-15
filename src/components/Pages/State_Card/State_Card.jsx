@@ -5,11 +5,11 @@ import { IoLocationSharp } from "react-icons/io5";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const State_Card = ({ data }) => {
-    const {property,estate_title,id,description,price,status,area,segment_name,location,facilities} = data;
+const State_Card = ({ state }) => {
+    const {property,estate_title,id,description,price,status,area,segment_name,location,facilities} = state;
   return (
     <div>
-      <div className="card card-compact bg-base-100 border-2">
+      <div className="card card-compact bg-base-100 border-2 shadow-lg">
         <figure>
           <img
             src={property}
@@ -47,7 +47,7 @@ const State_Card = ({ data }) => {
 };
 
 State_Card.propTypes = {
-    data:PropTypes.obj
+    state:PropTypes.obj
 };
 
 export default State_Card;

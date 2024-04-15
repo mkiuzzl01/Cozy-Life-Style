@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import Banner from "../Banner/Banner";
-import { stateContext } from "../../Root/Root";
 import State_Card from "../State_Card/State_Card";
+import { useLoaderData } from "react-router-dom";
 const Home = () => {
-    const stateInfo = useContext(stateContext);
+    const stateInfo = useLoaderData();
     return (
         <div className="my-4">
             <Banner></Banner>
@@ -13,7 +12,7 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-4" >
                 {
                     stateInfo&&
-                    stateInfo.map((data)=> <State_Card key={data.id} data={data}></State_Card>)
+                    stateInfo.map((state)=> <State_Card key={state.id} state={state}></State_Card>)
                 }
             </div>
         </div>

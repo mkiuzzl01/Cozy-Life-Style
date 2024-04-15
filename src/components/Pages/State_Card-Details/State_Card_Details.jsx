@@ -1,12 +1,8 @@
-import { useContext } from 'react';
-import { useParams } from 'react-router-dom';
-import { stateContext } from '../../Root/Root';
+import { useLoaderData } from "react-router-dom";
+
 
 const State_Card_Details = () => {
-    const {id} = useParams();
-    const ID = parseInt(id);
-    const data = useContext(stateContext);
-    const info = data.find((data)=> data.id == ID);
+    const info = useLoaderData();
     const {description,
         property,
         estate_title,
@@ -17,7 +13,6 @@ const State_Card_Details = () => {
         location,
         facilities
     } = info;
-    console.log(description);
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center p-2">
         <div className="bg-[#1313130D] p-8 flex justify-center items-center">

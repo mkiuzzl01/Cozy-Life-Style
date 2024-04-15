@@ -1,9 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const LogIn = () => {
   const {logInUser,logInWithGoogle,logInWithGithub} = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
+
+
   const handleLogIn = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -13,6 +18,9 @@ const LogIn = () => {
 
     logInUser(Email,Password)
     .then(result=>{
+      // Navigate After Login
+      navigate(location?.state ? location.state : '/' );
+
       console.log(result);
       console.log('LogIn Successful');
     })
@@ -21,6 +29,7 @@ const LogIn = () => {
     })
 
   };
+
   const GoogleLogIn = ()=>{
     logInWithGoogle()
     .then(result=>{
@@ -30,6 +39,7 @@ const LogIn = () => {
       console.error(error);
     })
   }
+
   const githubLogIn = ()=>{
     logInWithGithub()
     .then(result=>{
@@ -56,6 +66,7 @@ const LogIn = () => {
               name="Email"
               id="Email"
               placeholder="Email"
+              required
               className="w-full px-4 py-3 rounded-md border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 focus:border-violet-400 focus:dark:border-violet-600"
             />
           </div>
@@ -71,6 +82,7 @@ const LogIn = () => {
               name="Password"
               id="Password"
               placeholder="Password"
+              required
               className="w-full px-4 py-3 rounded-md border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 focus:border-violet-400 focus:dark:border-violet-600"
             />
             <div className="flex justify-end text-xs text-gray-400 dark:text-gray-600">
