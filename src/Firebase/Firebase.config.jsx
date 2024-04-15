@@ -1,15 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBdK1mAPogpdKaCfH9B0FaDN_fWLrVF0GM",
-  authDomain: "cozy-life-style.firebaseapp.com",
-  projectId: "cozy-life-style",
-  storageBucket: "cozy-life-style.appspot.com",
-  messagingSenderId: "585947209874",
-  appId: "1:585947209874:web:02466e02ad3df6ed56464b"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
