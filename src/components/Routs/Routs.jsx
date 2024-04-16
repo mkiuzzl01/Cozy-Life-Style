@@ -10,6 +10,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import Contact_Us from "../Pages/Contact_Us/Contact_Us";
 import User_Profile from "../Pages/User_Profile/User_Profile";
 import About from "../Pages/About/About";
+import Not_Found_Page from "../Pages/Not_Found/Not_Found_Page";
 
 
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     {
         path:'/',
         element:<Root></Root>,
+        errorElement:<Not_Found_Page></Not_Found_Page>,
         children:[
             {
                 index:true,
@@ -42,11 +44,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'/UpdateProfile',
-                element:<ProtectedRoute><Update_Profile></Update_Profile></ProtectedRoute>
+                element:<Update_Profile></Update_Profile>
             },
             {
                 path:'/UserProfile',
-                element:<ProtectedRoute><User_Profile></User_Profile></ProtectedRoute>
+                element:<User_Profile></User_Profile>
             },
             {
                 path:'/LogIn',

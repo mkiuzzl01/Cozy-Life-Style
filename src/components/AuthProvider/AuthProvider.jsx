@@ -1,6 +1,7 @@
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../../Firebase/Firebase.config";
+import {  toast } from "react-toastify";
 
 export const AuthContext = createContext(null);
 
@@ -40,6 +41,22 @@ const AuthProvider = ({children}) => {
         })
     }
 
+    const successToast = (text)=>{
+        return toast.success(text, {
+            position: "bottom-center"
+          });
+    }
+
+    const errorToast = (text)=>{
+        return toast.error(text, {
+            position: "bottom-center"
+          });
+    }
+    const warningToast = (text)=>{
+        return toast.warn(text, {
+            position: "bottom-center"
+          });
+    }
     useEffect(()=>{
        const unsubscribe = onAuthStateChanged(auth,(currentUser)=>{
                 setUser(currentUser);
@@ -51,13 +68,16 @@ const AuthProvider = ({children}) => {
     },[])
     const shareTools = {
         user,
+        isLoading,
         registerUser,
         logInUser,
         logInWithGoogle,
         logInWithGithub,
         logOut,
         profileUpdate,
-        isLoading
+        successToast,
+        errorToast,
+        warningToast
     }
     return (
         <div>

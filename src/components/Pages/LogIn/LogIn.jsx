@@ -1,13 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
 
 const LogIn = () => {
-  const {logInUser,logInWithGoogle,logInWithGithub} = useContext(AuthContext);
+  const {logInUser,logInWithGoogle,logInWithGithub,successToast,errorToast} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const [error,setError] = useState('');
 
 
   const handleLogIn = (e) => {
@@ -15,17 +14,18 @@ const LogIn = () => {
     const form = new FormData(e.currentTarget);
     const Email = form.get("Email");
     const Password = form.get("Password");
-
+    
+    setError('');
     logInUser(Email,Password)
     .then(()=>{
       // Navigate After Login
+      successToast('Login Successful');
       navigate(location?.state ? location.state : '/' );
-      toast.success("Login Success!", {
-        position: "bottom-center"
-      });
+      
     })
-    .catch(error=>{
-      console.error(error);
+    .catch(()=>{
+      setError('Something wrong');
+      errorToast('Something Wrong')
     })
 
   };
@@ -34,13 +34,11 @@ const LogIn = () => {
     logInWithGoogle()
     .then(()=>{
       // Navigate After Login
+      successToast('Login Successful');
       navigate(location?.state ? location.state : '/' );
-      toast.success("Login Success!", {
-        position: "bottom-center"
-      });
     })
-    .catch(error=>{
-      console.error(error);
+    .catch(()=>{
+      errorToast('Something Wrong')
     })
   }
 
@@ -48,27 +46,25 @@ const LogIn = () => {
     logInWithGithub()
     .then(()=>{
       // Navigate After Login
+      successToast('Login Successful');
       navigate(location?.state ? location.state : '/' );
-      toast.success("Login Success!", {
-        position: "bottom-center"
-      });
     })
-    .catch(error=>{
-      console.error(error);
+    .catch(()=>{
+      errorToast('Something Wrong')
     })
   }
   return (
-    <div className="flex flex-col md:flex-row md:justify-center items-center bg-purple-400 rounded-lg my-4 p-4">
+    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4">
       <div>
         <img src="https://i.ibb.co/ZhJ8g1h/Hands-Unlocked.png" alt="" />
       </div>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-transparent text-white">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-transparent text-yellow-200">
         <h1 className="text-4xl font-bold text-center">Login</h1>
         <form onSubmit={handleLogIn} className="space-y-6">
           <div className="space-y-1 text-sm">
             <label
               htmlFor="Email"
-              className="block text-black"
+              className="block text-white"
             >
               Email
             </label>
@@ -84,7 +80,7 @@ const LogIn = () => {
           <div className="space-y-1 text-sm">
             <label
               htmlFor="Password"
-              className="block text-black"
+              className="block text-white"
             >
               Password
             </label>
@@ -96,19 +92,22 @@ const LogIn = () => {
               required
               className="w-full px-4 py-3 rounded-md border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 focus:border-violet-400 focus:dark:border-violet-600"
             />
-            <div className="flex justify-end text-xs text-black">
+            <div className="flex justify-end text-xs text-white">
               <a rel="noopener noreferrer" href="#">
                 Forgot Password?
               </a>
             </div>
           </div>
-          <button className="block w-full p-3 text-center rounded-sm text-white bg-violet-600  hover:bg-sky-600">
+          <div>
+            <p className="text-red-500">{error}</p>
+          </div>
+          <button className="block w-full p-3 text-center rounded-sm text-black bg-yellow-200  hover:bg-green-600">
             LogIn
           </button> 
         </form>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-gray-700 dark:bg-gray-300"></div>
-          <p className="px-3 text-sm text-black">
+          <p className="px-3 text-sm text-white">
             Login with social accounts
           </p>
           <div className="flex-1 h-px sm:w-16 bg-gray-700 dark:bg-gray-300"></div>
@@ -142,7 +141,7 @@ const LogIn = () => {
             </svg>
           </button>
         </div>
-        <p className="text-sm text-center sm:px-6 text-black">
+        <p className="text-sm text-center sm:px-6 text-white">
           Don't have an account?
           <Link to="/Register" className="font-bold">Register</Link>
         </p>

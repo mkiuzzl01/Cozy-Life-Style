@@ -1,25 +1,29 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Update_Profile = () => {
-  const { user,profileUpdate} = useContext(AuthContext);
+  const { user,profileUpdate,successToast} = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const Name = form.get('Name');
     const Image = form.get('Image');
-    console.log(Name,Image);
+
     profileUpdate(Name,Image)
-    .then(result=>{
-        console.log(result);
+    .then(()=>{
+        successToast('Profile Updated');
+        navigate(location.state = '/UpdateProfile' );
     })
   };
 
   return (
     <div className="bg-red-100 my-4 rounded-lg grid grid-cols-1 md:grid-cols-2 ">
       <div className="flex flex-col items-center gap-4 border-e-2 border-white border-dashed">
-        <p>Previous Profile</p>
+        <p>Current Profile</p>
         <img
           src={
             user?.photoURL
@@ -33,7 +37,7 @@ const Update_Profile = () => {
           <h1>
             <span className="text-2xl font-bold">Name:</span>{" "}
             <span className="text-2xl">
-              {user?.displayName ? user.displayName : "Unknown user"}
+              {user?.displayName ? user.displayName : "Username Not Found"}
             </span>
           </h1>
           <p className="">
