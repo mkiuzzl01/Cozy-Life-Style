@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet";
+
 const Contact_Us = () => {
   return (
     <div className="my-4">
+      <Helmet>
+        <title>Cozy-Life-Style | Contact Us </title>
+      </Helmet>
       <section className="py-6 bg-[url(https://reno.wpresidence.net/wp-content/uploads/2023/08/background-building.png)] bg-no-repeat bg-contain bg-top dark:bg-gray-100 text-gray-50 dark:text-gray-900">
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
           <div className="py-6 md:py-0 md:px-6">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 
@@ -15,6 +16,9 @@ const State_Card_Details = () => {
     } = info;
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center p-2">
+        <Helmet>
+        <title>Cozy-Life-Style | State Details </title>
+      </Helmet>
         <div className="bg-[#1313130D] p-8 flex justify-center items-center">
             <img src={property}
             className=""

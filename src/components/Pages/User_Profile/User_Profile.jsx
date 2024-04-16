@@ -1,11 +1,15 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const User_Profile = () => {
     const {user} = useContext(AuthContext);
   return (
     <div className="bg-red-100 p-4 mt-4 rounded-lg">
+      <Helmet>
+        <title>Cozy-Life-Style | User Profile </title>
+      </Helmet>
         <div className="flex flex-col items-center lg:flex-row lg:justify-evenly">
         <img src={user?.photoURL? user.photoURL : 'https://i.ibb.co/x19M7TG/blank-profile-picture-973460-1280.png'} alt="" className="w-1/4 rounded-xl" />
           <div className="space-y-4">

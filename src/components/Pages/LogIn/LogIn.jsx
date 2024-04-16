@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const LogIn = () => {
   const {logInUser,logInWithGoogle,logInWithGithub,successToast,errorToast} = useContext(AuthContext);
@@ -55,6 +56,9 @@ const LogIn = () => {
   }
   return (
     <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4">
+      <Helmet>
+        <title>Cozy-Life-Style | Login </title>
+      </Helmet>
       <div>
         <img src="https://i.ibb.co/ZhJ8g1h/Hands-Unlocked.png" alt="" />
       </div>

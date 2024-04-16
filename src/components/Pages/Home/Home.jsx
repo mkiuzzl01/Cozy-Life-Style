@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "../Banner/Banner";
 import Our_Services from "../Our_Services/Our_Services";
 import Properties from "../Properties/Properties";
@@ -7,10 +8,14 @@ const Home = () => {
   const stateInfo = useLoaderData();
   return (
     <div className="my-4">
+      <Helmet>
+        <title>Cozy-Life-Style | Home </title>
+      </Helmet>
       <Banner></Banner>
       <section className="my-20 text-center space-y-4">
         <h1 className="text-3xl font-Merriweather uppercase  font-bold">
-        <span className="text-green-400">__</span>Residential<span className="text-green-400">__</span>
+          <span className="text-green-400">__</span>Residential
+          <span className="text-green-400">__</span>
         </h1>
         <p>
           We are recognized for exceeding client <br /> expectations and
@@ -29,7 +34,7 @@ const Home = () => {
       <section>
         <div className="my-20">
           <h1 className="text-3xl font-Merriweather uppercase  font-bold">
-          <span className="text-green-400">__</span>Our Services
+            <span className="text-green-400">__</span>Our Services
           </h1>
           <p>
             Detailed descriptions of properties allow a good preselection.{" "}
@@ -45,10 +50,12 @@ const Home = () => {
             Properties By Area<span className="text-green-400">__</span>
           </h1>
           <p>
-          Welcome to our Properties by Area section, <br /> where you can explore a diverse range of residential options tailored to your space requirements. 
+            Welcome to our Properties by Area section, <br /> where you can
+            explore a diverse range of residential options tailored to your
+            space requirements.
           </p>
         </div>
-          <Properties></Properties>
+        <Properties></Properties>
       </section>
     </div>
   );

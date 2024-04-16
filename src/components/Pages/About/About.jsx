@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet";
+
 const About = () => {
   return (
     <div className="space-y-4 pt-2">
+      <Helmet>
+        <title>Cozy-Life-Style | About </title>
+      </Helmet>
       <p>
         <span className="text-3xl font-semibold">
           Welcome to Cozy-Life-Style,

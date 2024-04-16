@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { LuEyeOff } from "react-icons/lu";
 import { FiEye } from "react-icons/fi";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { registerUser, profileUpdate, successToast, errorToast } =
@@ -18,6 +19,7 @@ const Register = () => {
     const Email = e.target.email.value;
     const PhotoURL = e.target.image.value;
     const Password = e.target.password.value;
+    console.log(Name,Email,PhotoURL,Password);
     // Password Validation
     setError("");
     if (Password.length < 6) {
@@ -42,6 +44,9 @@ const Register = () => {
   };
   return (
     <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500  rounded-lg my-4 p-4">
+      <Helmet>
+        <title>Cozy-Life-Style | Register </title>
+      </Helmet>
       <div>
         <img src="https://i.ibb.co/rx78H9q/Brazuca-Planning-1.png" alt="" />
       </div>
@@ -82,7 +87,7 @@ const Register = () => {
               type="text"
               placeholder="Photo URL"
               className="input w-full  "
-              name="email"
+              name="image"
               
             />
           </div>
@@ -96,13 +101,13 @@ const Register = () => {
                 name="password"
                 required
               />
-
               <div>
                 <span onClick={() => setShowPass(!showPass)}>
                   {showPass ? <LuEyeOff /> : <FiEye />}
                 </span>
               </div>
             </label>
+              <p className="text-red-300">{error}</p>
           </div>
           <div className="form-control mt-6">
           <button className="block w-full  p-3 text-center rounded-sm text-black bg-yellow-200  hover:bg-green-600">

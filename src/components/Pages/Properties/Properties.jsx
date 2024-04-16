@@ -20,9 +20,6 @@ const Properties = () => {
           }}
         loop={true}
         freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
         modules={[FreeMode, Pagination, Autoplay]}
         className="mySwiper"
       >
