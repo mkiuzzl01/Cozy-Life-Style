@@ -28,6 +28,13 @@ const Navbar = () => {
         : "p-2 hover:border-gray-600 hover:border-b-2 rounded-lg"
     }
        to="/">Home</NavLink>
+      <NavLink
+      className={({ isActive }) =>
+      isActive
+        ? "border-t-2 rounded-lg text-[#23BE0A] border-red-500 p-2"
+        : "p-2 hover:border-gray-600 hover:border-b-2 rounded-lg"
+    }
+       to="/About">About</NavLink>
       { user &&
         <NavLink
         className={({ isActive }) =>
@@ -80,7 +87,7 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Cozy-Life-Style</a>
+        <a className="btn btn-ghost font-Merriweather text-xl">Cozy-Life-Style</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal space-x-4">{navLink}</ul>
@@ -88,13 +95,13 @@ const Navbar = () => {
       <div className="navbar-end space-x-2">
         {user ? (
           <>
-            <p className={`hover:${user?.email}`}>{user?.email}</p>
+            {/* <p className={`hover:${user?.email}`}>{user?.email}</p> */}
 
             <div className="tooltip tooltip-bottom" data-tip={user?.displayName? user.displayName : 'Unknown user'}>
             <img src={user?.photoURL? user.photoURL : 'https://i.ibb.co/x19M7TG/blank-profile-picture-973460-1280.png'} alt="" className="w-10 rounded-full " />
             </div>
             <Link>
-              <button onClick={logout} className="btn bg-[#99d1e9] border-none">
+              <button onClick={logout} className="btn btn-outline text-white hover:btn-success">
                 LogOut
               </button>
               <ToastContainer />
@@ -102,7 +109,7 @@ const Navbar = () => {
           </>
         ) : (
           <Link to="/LogIn">
-            <button className="btn bg-[#99d1e9] border-none">LogIn</button>
+            <button className="btn btn-outline text-white hover:btn-success">LogIn</button>
           </Link>
         )}
       </div>

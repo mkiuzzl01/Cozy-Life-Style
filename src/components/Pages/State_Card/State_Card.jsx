@@ -38,7 +38,7 @@ const State_Card = ({ state }) => {
             </div>
           </div>
           <div className="card-actions justify-center">
-            <Link to={`/State_Card_Details/${id}`}><button className="btn bg-[#99d1e9]">View Details</button></Link>
+            <Link to={`/State_Card_Details/${id}`}><button className="btn btn-outline btn-success">View Details</button></Link>
           </div>
         </div>
       </div>

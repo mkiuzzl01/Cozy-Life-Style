@@ -9,6 +9,7 @@ import axios from "axios";
 import ProtectedRoute from "./ProtectedRoute";
 import Contact_Us from "../Pages/Contact_Us/Contact_Us";
 import User_Profile from "../Pages/User_Profile/User_Profile";
+import About from "../Pages/About/About";
 
 
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
                 loader: async () => (fetch('/residential.json')),
                 element:<Home></Home>
                 
+            },
+            {
+                path:'/About',
+                element:<About></About>
             },
             {
                 path:'/State_Card_Details/:id',

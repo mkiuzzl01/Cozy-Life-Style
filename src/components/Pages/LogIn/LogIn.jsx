@@ -58,14 +58,17 @@ const LogIn = () => {
     })
   }
   return (
-    <div className="flex justify-center">
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
-        <h1 className="text-2xl font-bold text-center">Login</h1>
+    <div className="flex flex-col md:flex-row md:justify-center items-center bg-purple-400 rounded-lg my-4 p-4">
+      <div>
+        <img src="https://i.ibb.co/ZhJ8g1h/Hands-Unlocked.png" alt="" />
+      </div>
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-transparent text-white">
+        <h1 className="text-4xl font-bold text-center">Login</h1>
         <form onSubmit={handleLogIn} className="space-y-6">
           <div className="space-y-1 text-sm">
             <label
               htmlFor="Email"
-              className="block text-gray-400 dark:text-gray-600"
+              className="block text-black"
             >
               Email
             </label>
@@ -81,7 +84,7 @@ const LogIn = () => {
           <div className="space-y-1 text-sm">
             <label
               htmlFor="Password"
-              className="block text-gray-400 dark:text-gray-600"
+              className="block text-black"
             >
               Password
             </label>
@@ -93,19 +96,19 @@ const LogIn = () => {
               required
               className="w-full px-4 py-3 rounded-md border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 focus:border-violet-400 focus:dark:border-violet-600"
             />
-            <div className="flex justify-end text-xs text-gray-400 dark:text-gray-600">
+            <div className="flex justify-end text-xs text-black">
               <a rel="noopener noreferrer" href="#">
                 Forgot Password?
               </a>
             </div>
           </div>
-          <button className="block w-full p-3 text-center rounded-sm text-gray-900 dark:text-gray-50 bg-violet-400 dark:bg-violet-600">
+          <button className="block w-full p-3 text-center rounded-sm text-white bg-violet-600  hover:bg-sky-600">
             LogIn
           </button> 
         </form>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-gray-700 dark:bg-gray-300"></div>
-          <p className="px-3 text-sm text-gray-400 dark:text-gray-600">
+          <p className="px-3 text-sm text-black">
             Login with social accounts
           </p>
           <div className="flex-1 h-px sm:w-16 bg-gray-700 dark:bg-gray-300"></div>
@@ -139,9 +142,9 @@ const LogIn = () => {
             </svg>
           </button>
         </div>
-        <p className="text-xs text-center sm:px-6 text-gray-400 dark:text-gray-600">
+        <p className="text-sm text-center sm:px-6 text-black">
           Don't have an account?
-          <Link to="/Register">Register</Link>
+          <Link to="/Register" className="font-bold">Register</Link>
         </p>
       </div>
     </div>

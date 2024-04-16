@@ -30,7 +30,7 @@ const Banner = () => {
       pagination={{ clickable: true }}
   >
     <SwiperSlide>
-    <div className="flex flex-col lg:flex-row bg-yellow-200 rounded-lg lg:justify-between items-center">
+    <div className="flex flex-col lg:flex-row bg-[url(https://dubai.wpresidence.net/wp-content/uploads/revslider/craftsman/slider-bg.png)] rounded-lg lg:justify-between items-center">
       <div className="md:w-1/2 lg:ms-16 lg:space-y-4">
         <h1 className="font-Merriweather font-medium text-4xl uppercase">
           Choose Your <br /> Residential Place
@@ -45,13 +45,13 @@ const Banner = () => {
         <img
           src="https://reno.wpresidence.net/wp-content/uploads/2023/08/slider3.jpg"
           alt=""
-          className="m-0"
+          className="rounded-e-lg"
         />
       </div>
     </div>
     </SwiperSlide>
     <SwiperSlide>
-    <div className="flex flex-col lg:flex-row bg-yellow-200 rounded-lg lg:justify-between items-center">
+    <div className="flex flex-col lg:flex-row bg-sky-200 rounded-lg lg:justify-between items-center">
       <div className="md:w-1/2 lg:ms-16 lg:space-y-4">
         <h1 className="font-Merriweather font-medium text-4xl uppercase">
           Choose Your <br /> Residential Place
@@ -62,17 +62,17 @@ const Banner = () => {
           services to our worldwide clients.
         </p>
       </div>
-      <div className="md:w-1/2">
+      <div className="md:w-3/4">
         <img
-          src="https://reno.wpresidence.net/wp-content/uploads/2023/08/slider3.jpg"
+          src="https://i.ibb.co/Pm9Q4G9/francesca-tosolini-Xc-Vm8mn7-NUM-unsplash.jpg"
           alt=""
-          className="m-0"
+          className="rounded-e-lg"
         />
       </div>
     </div>
     </SwiperSlide>
     <SwiperSlide>
-    <div className="flex flex-col lg:flex-row bg-yellow-200 rounded-lg lg:justify-between items-center">
+    <div className="flex flex-col lg:flex-row bg-purple-200 rounded-lg lg:justify-between items-center">
       <div className="md:w-1/2 lg:ms-16 lg:space-y-4">
         <h1 className="font-Merriweather font-medium text-4xl uppercase">
           Choose Your <br /> Residential Place
@@ -85,9 +85,9 @@ const Banner = () => {
       </div>
       <div className="md:w-1/2">
         <img
-          src="https://reno.wpresidence.net/wp-content/uploads/2023/08/slider3.jpg"
+          src="https://i.ibb.co/SrSM2Yc/debby-hudson-Fm-CSSSGge-0-unsplash.jpg"
           alt=""
-          className="m-0"
+          className="rounded-e-lg"
         />
       </div>
     </div>

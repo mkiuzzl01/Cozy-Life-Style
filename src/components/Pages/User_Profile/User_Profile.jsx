@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const User_Profile = () => {
     const {user} = useContext(AuthContext);
-    console.log(user);
   return (
-    <div className="bg-red-100 p-4 my-4 rounded-lg">
+    <div className="bg-red-100 p-4 mt-4 rounded-lg">
         <div className="flex flex-col items-center lg:flex-row lg:justify-evenly">
         <img src={user?.photoURL? user.photoURL : 'https://i.ibb.co/x19M7TG/blank-profile-picture-973460-1280.png'} alt="" className="w-1/4 rounded-xl" />
           <div className="space-y-4">
@@ -15,7 +15,9 @@ const User_Profile = () => {
             </p>
             <p><span className="font-semibold">Profile Creation Time: </span><span>
             {user.metadata.creationTime}</span></p>
-            <button className="btn btn-primary">Get Started</button>
+            <div className="text-center">
+            <Link to='/UpdateProfile'><button className="btn btn-success text-white">Update Profile</button></Link>
+            </div>
           </div>
         </div>
       </div>

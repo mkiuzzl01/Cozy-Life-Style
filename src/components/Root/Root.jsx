@@ -13,7 +13,7 @@ const Root = () => {
             <Navbar></Navbar>
           </nav>
         </header>
-        <main className="max-w-7xl m-auto min-h-[calc(100vh-290px)]">
+        <main className="max-w-7xl m-auto px-2 md:px-0 min-h-[calc(100vh-290px)]">
         <ToastContainer />
           <Outlet></Outlet>
         </main>
