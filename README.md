@@ -1,8 +1,15 @@
-# React + Vite
+Website Name: Cozy-Life-Style
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Firebase Live Link: https://cozy-life-style.web.app/
 
-Currently, two official plugins are available:
+Features of This site:
+1. This is an Awesome user-feeling interface and friendly behavior.
+2. The user can easily find a Residential Property.
+3. This is a Pure Authentic site.
+4. if the user wants to contact us it is possible easily.
+5. Amazing animation is included in this project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Name Of use npm packages:
+1. $ npm install aos --save
+2. $ npm install animate.css --save
+3. $ npm i swiper
