@@ -4,8 +4,12 @@ import Our_Services from "../Our_Services/Our_Services";
 import Properties from "../Properties/Properties";
 import State_Card from "../State_Card/State_Card";
 import { useLoaderData } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Home = () => {
+  const { isLoading } = useContext(AuthContext);
   const stateInfo = useLoaderData();
+
   return (
     <div className="my-4">
       <Helmet>
@@ -24,6 +28,9 @@ const Home = () => {
         </p>
       </section>
       <section>
+        <div className={isLoading ? "visible text-center" : "hidden"}>
+          <span className="loading loading-bars loading-lg absolute bg-green-400"></span>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
           {stateInfo &&
             stateInfo.map((state) => (

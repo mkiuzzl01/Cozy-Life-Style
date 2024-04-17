@@ -13,7 +13,7 @@ const Our_Services = () => {
     Aos.init({duration:1000});
   },[])
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4" data-aos="fade-left">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 font-PT_Sans " data-aos="fade-left">
       <div className="lg:col-span-2 card p-4 shadow-sm border-2">
         <p className="text-2xl font-bold uppercase"><span className="text-yellow-500">____</span>Why we can help you</p>
         <p>

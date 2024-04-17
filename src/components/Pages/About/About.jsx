@@ -8,7 +8,7 @@ const About = () => {
     Aos.init({duration:1000});
   },[])
   return (
-    <div className="space-y-4 pt-2" data-aos="slide-up">
+    <div className="space-y-4 pt-2 font-PT_Sans" data-aos="slide-up">
       <Helmet>
         <title>Cozy-Life-Style | About </title>
       </Helmet>

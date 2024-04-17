@@ -14,10 +14,10 @@ const Contact_Us = () => {
       <Helmet>
         <title>Cozy-Life-Style | Contact Us </title>
       </Helmet>
-      <section className="py-6 bg-[url(https://reno.wpresidence.net/wp-content/uploads/2023/08/background-building.png)] bg-no-repeat bg-contain bg-top dark:bg-gray-100 text-gray-50 dark:text-gray-900">
-        <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+      <section className="rounded-lg bg-[url(https://reno.wpresidence.net/wp-content/uploads/2023/08/background-building.png)] bg-no-repeat">
+        <div className="grid items-center grid-cols-1 p-10 mx-auto md:grid-cols-2 md:divide-x text-white bg-opacity-50 bg-slate-700 rounded-lg">
           <div className="py-6 md:py-0 md:px-6">
-            <h1 className="text-4xl font-bold">Get in touch</h1>
+            <h1 className="text-4xl font-bold text-yellow-200">Get in touch</h1>
             <p className="pt-2 pb-4">
               Fill in the form to start a conversation
             </p>
@@ -71,7 +71,7 @@ const Contact_Us = () => {
               <input
                 type="text"
                 placeholder="Leroy Jenkins"
-                className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100"
+                className="block input w-full "
               />
             </label>
             <label className="block">
@@ -79,19 +79,19 @@ const Contact_Us = () => {
               <input
                 type="email"
                 placeholder="leroy@jenkins.com"
-                className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100"
+                className="block w-full input"
               />
             </label>
             <label className="block">
               <span className="mb-1">Message</span>
               <textarea
                 rows="3"
-                className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100"
+                className="block w-full textarea"
               ></textarea>
             </label>
             <button
               type="button"
-              className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 hover:ring-violet-400 hover:dark:ring-violet-600"
+              className="block w-full p-3 text-center rounded-sm text-black bg-yellow-200  hover:bg-green-600"
             >
               Submit
             </button>

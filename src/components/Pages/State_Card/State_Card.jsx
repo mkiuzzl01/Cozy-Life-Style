@@ -12,7 +12,7 @@ const State_Card = ({ state }) => {
     const {property,estate_title,id,description,price,status,area,segment_name,location,facilities} = state;
 
   useEffect(()=>{
-    Aos.init({duration:1000});
+    Aos.init();
   },[])
   return (
     <div data-aos="zoom-in">
@@ -22,6 +22,7 @@ const State_Card = ({ state }) => {
             src={property}
             alt="Shoes"
             className="w-fit"
+            loading="lazy"
           />
         </figure>
         <div className="card-body">
@@ -33,7 +34,7 @@ const State_Card = ({ state }) => {
             </div>
           <h2 className="text-2xl font-bold font-Merriweather">{estate_title}</h2>
           <p className="text-lg font-medium">{segment_name}</p>
-          <p>{description}</p>
+          <p className="font-PT_Sans">{description}</p>
           <div>
             <p className="flex items-center font-semibold"><span className=""><IoLocationSharp /></span> <span>{location}</span></p>
             <div className=" mt-4">

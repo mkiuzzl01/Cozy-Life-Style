@@ -26,7 +26,7 @@ const Update_Profile = () => {
     Aos.init({duration:1000});
   },[])
   return (
-    <div className="bg-red-100 my-4 rounded-lg grid grid-cols-1 md:grid-cols-2" data-aos="zoom-in">
+    <div className="bg-green-100 my-4 rounded-lg grid grid-cols-1 md:grid-cols-2 font-PT_Sans" data-aos="zoom-in">
       <Helmet>
         <title>Cozy-Life-Style | Update Profile </title>
       </Helmet>
@@ -95,7 +95,7 @@ const Update_Profile = () => {
               </div>
             </div>
               <button
-                className="w-full btn btn-success text-white">Submit</button>
+                className="w-full btn btn-outline btn-success">Save</button>
           </form>
         </div>
       </div>

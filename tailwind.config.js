@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
+      'PT_Sans':["PT Sans", 'sans-serif'],
       'Merriweather':['Merriweather', 'serif'],
     }
   },

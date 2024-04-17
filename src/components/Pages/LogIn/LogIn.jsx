@@ -63,7 +63,7 @@ const LogIn = () => {
   },[])
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4" data-aos="flip-down">
+    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4 font-PT_Sans " data-aos="flip-down">
       <Helmet>
         <title>Cozy-Life-Style | Login </title>
       </Helmet>

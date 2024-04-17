@@ -7,8 +7,8 @@ const ProtectedRoute = ({children}) => {
     const {user,isLoading} = useContext(AuthContext);
     const location = useLocation()
     
-    if(isLoading === true){
-        return <div className='text-center'><span className="loading loading-bars loading-lg absolute"></span></div>
+    if(isLoading){
+        return <div className='text-center'><span className="loading loading-bars loading-lg bg-green-400 absolute"></span></div>
     }
     if(!user){
         return <Navigate to='/LogIn' state={location.pathname}></Navigate>

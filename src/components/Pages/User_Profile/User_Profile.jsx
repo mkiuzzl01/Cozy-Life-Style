@@ -12,7 +12,7 @@ const User_Profile = () => {
       Aos.init({duration:1000});
     },[])
   return (
-    <div className="bg-red-100 p-4 mt-4 rounded-lg" data-aos="zoom-in">
+    <div className="bg-green-100 py-24 mt-4 rounded-lg font-PT_Sans" data-aos="zoom-in">
       <Helmet>
         <title>Cozy-Life-Style | User Profile </title>
       </Helmet>
@@ -26,7 +26,7 @@ const User_Profile = () => {
             <p><span className="font-semibold">Profile Creation Time: </span><span>
             {user.metadata.creationTime}</span></p>
             <div className="text-center">
-            <Link to='/UpdateProfile'><button className="btn btn-success text-white">Update Profile</button></Link>
+            <Link to='/UpdateProfile'><button className="w-full btn btn-outline btn-success">Update Profile</button></Link>
             </div>
           </div>
         </div>

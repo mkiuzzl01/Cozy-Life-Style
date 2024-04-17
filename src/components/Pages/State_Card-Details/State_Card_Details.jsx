@@ -21,7 +21,7 @@ const State_Card_Details = () => {
         Aos.init({duration:1000});
       },[])
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center p-2" data-aos="zoom-out">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center p-2 font-PT_Sans" data-aos="zoom-out">
         <Helmet>
         <title>Cozy-Life-Style | State Details </title>
       </Helmet>

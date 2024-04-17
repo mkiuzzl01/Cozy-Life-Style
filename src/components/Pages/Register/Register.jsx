@@ -50,7 +50,7 @@ const Register = () => {
     Aos.init({duration:1000});
   },[])
   return (
-    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500  rounded-lg my-4 p-4" data-aos="flip-up">
+    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500  rounded-lg my-4 p-4 font-PT_Sans" data-aos="flip-up">
       <Helmet>
         <title>Cozy-Life-Style | Register </title>
       </Helmet>
