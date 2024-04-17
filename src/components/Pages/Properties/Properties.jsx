@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 const Properties = () => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({duration:1000});
   }, []);
   return (
     <div data-aos="fade-right">
@@ -16,7 +16,7 @@ const Properties = () => {
         slidesPerView={3}
         spaceBetween={30}
         autoplay={{
-          delay: 2000,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         loop={true}

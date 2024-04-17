@@ -12,7 +12,7 @@ const User_Profile = () => {
       Aos.init({duration:1000});
     },[])
   return (
-    <div className="bg-green-100 py-24 mt-4 rounded-lg font-PT_Sans" data-aos="zoom-in">
+    <div className="bg-green-100 my-8 py-20 rounded-lg font-PT_Sans" data-aos="zoom-in">
       <Helmet>
         <title>Cozy-Life-Style | User Profile </title>
       </Helmet>
