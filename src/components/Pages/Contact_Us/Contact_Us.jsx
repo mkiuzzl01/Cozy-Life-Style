@@ -1,8 +1,16 @@
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const Contact_Us = () => {
+
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
+
   return (
-    <div className="my-4">
+    <div className="my-4" data-aos="zoom-out">
       <Helmet>
         <title>Cozy-Life-Style | Contact Us </title>
       </Helmet>

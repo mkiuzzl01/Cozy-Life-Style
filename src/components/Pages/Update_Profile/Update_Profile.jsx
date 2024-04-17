@@ -1,7 +1,9 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const Update_Profile = () => {
   const { user,profileUpdate,successToast} = useContext(AuthContext);
@@ -20,9 +22,11 @@ const Update_Profile = () => {
         navigate(location.state = '/UpdateProfile' );
     })
   };
-
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
   return (
-    <div className="bg-red-100 my-4 rounded-lg grid grid-cols-1 md:grid-cols-2 ">
+    <div className="bg-red-100 my-4 rounded-lg grid grid-cols-1 md:grid-cols-2" data-aos="zoom-in">
       <Helmet>
         <title>Cozy-Life-Style | Update Profile </title>
       </Helmet>

@@ -1,8 +1,14 @@
 import { Helmet } from "react-helmet";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
   return (
-    <div className="space-y-4 pt-2">
+    <div className="space-y-4 pt-2" data-aos="slide-up">
       <Helmet>
         <title>Cozy-Life-Style | About </title>
       </Helmet>

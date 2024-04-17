@@ -4,6 +4,9 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { LuEyeOff } from "react-icons/lu";
 import { FiEye } from "react-icons/fi";
 import { Helmet } from "react-helmet";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Register = () => {
   const { registerUser, profileUpdate, successToast, errorToast } =
@@ -42,8 +45,12 @@ const Register = () => {
         errorToast("Something Wrong");
       });
   };
+
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
   return (
-    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500  rounded-lg my-4 p-4">
+    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500  rounded-lg my-4 p-4" data-aos="flip-up">
       <Helmet>
         <title>Cozy-Life-Style | Register </title>
       </Helmet>

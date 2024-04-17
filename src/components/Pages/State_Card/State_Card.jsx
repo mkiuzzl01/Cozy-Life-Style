@@ -4,11 +4,18 @@ import { LuScale3D } from "react-icons/lu";
 import { IoLocationSharp } from "react-icons/io5";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const State_Card = ({ state }) => {
     const {property,estate_title,id,description,price,status,area,segment_name,location,facilities} = state;
+
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
   return (
-    <div>
+    <div data-aos="zoom-in">
       <div className="card card-compact bg-base-100 border-2 shadow-lg">
         <figure>
           <img

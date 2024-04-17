@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const State_Card_Details = () => {
     const info = useLoaderData();
@@ -14,8 +16,12 @@ const State_Card_Details = () => {
         location,
         facilities
     } = info;
+
+    useEffect(()=>{
+        Aos.init({duration:1000});
+      },[])
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center p-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center p-2" data-aos="zoom-out">
         <Helmet>
         <title>Cozy-Life-Style | State Details </title>
       </Helmet>

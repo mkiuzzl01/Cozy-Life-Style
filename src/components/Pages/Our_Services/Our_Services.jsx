@@ -4,10 +4,16 @@ import { FaHandshake } from "react-icons/fa";
 import { AiOutlineRise } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa6";
 import { FaCamera } from "react-icons/fa";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Our_Services = () => {
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4" data-aos="fade-left">
       <div className="lg:col-span-2 card p-4 shadow-sm border-2">
         <p className="text-2xl font-bold uppercase"><span className="text-yellow-500">____</span>Why we can help you</p>
         <p>

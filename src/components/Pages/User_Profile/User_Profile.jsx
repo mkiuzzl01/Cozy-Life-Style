@@ -2,11 +2,17 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const User_Profile = () => {
     const {user} = useContext(AuthContext);
+    useEffect(()=>{
+      Aos.init({duration:1000});
+    },[])
   return (
-    <div className="bg-red-100 p-4 mt-4 rounded-lg">
+    <div className="bg-red-100 p-4 mt-4 rounded-lg" data-aos="zoom-in">
       <Helmet>
         <title>Cozy-Life-Style | User Profile </title>
       </Helmet>

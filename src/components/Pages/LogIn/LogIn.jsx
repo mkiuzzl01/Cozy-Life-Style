@@ -2,6 +2,9 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const LogIn = () => {
   const {logInUser,logInWithGoogle,logInWithGithub,successToast,errorToast} = useContext(AuthContext);
@@ -54,8 +57,13 @@ const LogIn = () => {
       errorToast('Something Wrong')
     })
   }
+
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
+
   return (
-    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4">
+    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4" data-aos="flip-down">
       <Helmet>
         <title>Cozy-Life-Style | Login </title>
       </Helmet>
