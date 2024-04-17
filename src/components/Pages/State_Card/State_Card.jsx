@@ -12,7 +12,7 @@ const State_Card = ({ state }) => {
     const {property,estate_title,id,description,price,status,area,segment_name,location,facilities} = state;
 
   useEffect(()=>{
-    Aos.init();
+    Aos.init({duration:1000});
   },[])
   return (
     <div data-aos="zoom-in">
@@ -20,7 +20,7 @@ const State_Card = ({ state }) => {
         <figure>
           <img
             src={property}
-            alt="Shoes"
+            alt={estate_title}
             className="w-fit"
             loading="lazy"
           />

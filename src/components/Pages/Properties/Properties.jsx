@@ -27,7 +27,7 @@ const Properties = () => {
         <SwiperSlide>
           <img
             src="https://i.ibb.co/GkzbC3N/frames-for-your-heart-m-R1-CIDdu-GLc-unsplash.jpg"
-            alt=""
+            alt="Property image coming soon"
             loading="lazy"
             className="w-full"
           />
@@ -35,7 +35,7 @@ const Properties = () => {
         <SwiperSlide>
           <img
             src="https://i.ibb.co/vzQ186c/rendy-novantino-btfixf2-Bb-S0-unsplash.jpg"
-            alt=""
+            alt="Property image coming soon"
             loading="lazy"
             className="w-full"
           />
@@ -43,7 +43,7 @@ const Properties = () => {
         <SwiperSlide>
           <img
             src="https://i.ibb.co/sRJDPXY/john-fornander-Id7u0-Ek-Tj-BE-unsplash.jpg"
-            alt=""
+            alt="Property image coming soon"
             loading="lazy"
             className="w-full"
           />
@@ -51,14 +51,14 @@ const Properties = () => {
         <SwiperSlide>
           <img
             src="https://i.ibb.co/h8WHVtb/tobias-nii-kwatei-quartey-Vq-Wy2xl-GK6-Q-unsplash.jpg"
-            alt=""
+            alt="Property image coming soon"
             className="w-full"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://i.ibb.co/GkzbC3N/frames-for-your-heart-m-R1-CIDdu-GLc-unsplash.jpg"
-            alt=""
+            alt="Property image coming soon"
             loading="lazy"
             className="w-full"
           />
@@ -66,7 +66,7 @@ const Properties = () => {
         <SwiperSlide>
           <img
             src="https://i.ibb.co/nQF0M0q/ksenia-balandina-RCF5-KSWb7-Ms-unsplash.jpg"
-            alt=""
+            alt="Property image coming soon"
             loading="lazy"
             className="w-full"
           />
@@ -74,7 +74,7 @@ const Properties = () => {
         <SwiperSlide>
           <img
             src="https://i.ibb.co/kgdYs2S/hans-m-q4-Gmk6-X-z7o-unsplash.jpg"
-            alt=""
+            alt="Property image coming soon"
             loading="lazy"
             className="w-full"
           />

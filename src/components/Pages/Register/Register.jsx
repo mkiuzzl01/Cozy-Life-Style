@@ -22,7 +22,6 @@ const Register = () => {
     const Email = e.target.email.value;
     const PhotoURL = e.target.image.value;
     const Password = e.target.password.value;
-    console.log(Name,Email,PhotoURL,Password);
     // Password Validation
     setError("");
     if (Password.length < 6) {
@@ -41,8 +40,9 @@ const Register = () => {
         successToast("Registration Successful");
         navigate(location?.state ? location.state : "/");
       })
-      .catch(() => {
+      .catch((error) => {
         errorToast("Something Wrong");
+        setError(error.message.split('/')[1].split(')'));
       });
   };
 
@@ -100,7 +100,7 @@ const Register = () => {
           </div>
           <div className="form-control">
             <span className="text-white my-2">Password:</span>
-            <label className="input w-full   flex items-center gap-2">
+            <label className="input w-full  flex items-center gap-2">
               <input
                 type={showPass ? "text" : "password"}
                 placeholder="Password"

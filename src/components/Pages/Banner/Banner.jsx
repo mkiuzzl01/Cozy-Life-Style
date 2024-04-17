@@ -49,8 +49,7 @@ const Banner = () => {
       <div className="md:w-1/2">
         <img
           src="https://reno.wpresidence.net/wp-content/uploads/2023/08/slider3.jpg"
-          alt=""
-          loading="lazy"
+          alt="Residential Image Coming soon"
           className="rounded-b-lg md:rounded-e-lg"
         />
       </div>
@@ -74,8 +73,7 @@ const Banner = () => {
       <div className="md:w-3/4">
         <img
           src="https://i.ibb.co/Pm9Q4G9/francesca-tosolini-Xc-Vm8mn7-NUM-unsplash.jpg"
-          alt=""
-          loading="lazy"
+          alt="Residential Image Coming soon"
           className="rounded-b-lg md:rounded-e-lg"
         />
       </div>
@@ -99,8 +97,7 @@ const Banner = () => {
       <div className="md:w-1/2">
         <img
           src="https://i.ibb.co/SrSM2Yc/debby-hudson-Fm-CSSSGge-0-unsplash.jpg"
-          alt=""
-          loading="lazy"
+          alt="Residential Image Coming soon"
           className="rounded-b-lg md:rounded-e-lg"
         />
       </div>

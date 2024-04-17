@@ -1,14 +1,19 @@
 import { Helmet } from "react-helmet";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css'
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Contact_Us = () => {
-
+  const {successToast} = useContext(AuthContext);
   useEffect(()=>{
     Aos.init({duration:1000});
   },[])
 
+  const handleContact = (e)=>{
+    e.preventDefault()
+    successToast('Submit Successful');
+  }
   return (
     <div className="my-4" data-aos="zoom-out">
       <Helmet>
@@ -63,6 +68,7 @@ const Contact_Us = () => {
             </div>
           </div>
           <form
+            onSubmit={handleContact}
             noValidate=""
             className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
           >
@@ -71,26 +77,28 @@ const Contact_Us = () => {
               <input
                 type="text"
                 placeholder="Leroy Jenkins"
-                className="block input w-full "
+                required
+                className="block input w-full text-black "
               />
             </label>
             <label className="block">
               <span className="mb-1">Email address</span>
               <input
                 type="email"
+                required
                 placeholder="leroy@jenkins.com"
-                className="block w-full input"
+                className="block w-full input text-black"
               />
             </label>
             <label className="block">
               <span className="mb-1">Message</span>
               <textarea
                 rows="3"
-                className="block w-full textarea"
+                required
+                className="block w-full textarea text-black"
               ></textarea>
             </label>
             <button
-              type="button"
               className="block w-full p-3 text-center rounded-sm text-black bg-yellow-200  hover:bg-green-600"
             >
               Submit
