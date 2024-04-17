@@ -10,6 +10,6 @@ Features of This site:
 5. Amazing animation is included in this project.
 
 Name Of use npm packages:
-1.$ npm install aos --save
-2.$ npm install animate.css --save
-3.$ npm i swiper
+1. $ npm install aos --save
+2. $ npm install animate.css --save
+3. $ npm i swiper
