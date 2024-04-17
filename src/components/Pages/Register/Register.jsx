@@ -50,14 +50,14 @@ const Register = () => {
     Aos.init({duration:1000});
   },[])
   return (
-    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500  rounded-lg my-4 p-4 font-PT_Sans" data-aos="flip-up">
+    <div className="flex flex-col lg:flex-row md:justify-center items-center bg-slate-500  rounded-lg my-4 p-4 font-PT_Sans" data-aos="flip-up">
       <Helmet>
         <title>Cozy-Life-Style | Register </title>
       </Helmet>
       <div>
         <img src="https://i.ibb.co/rx78H9q/Brazuca-Planning-1.png" alt="" />
       </div>
-      <div className="w-full md:w-1/2 space-y-3 rounded-xl bg-transparent ">
+      <div className="w-full lg:w-1/2 space-y-3 rounded-xl bg-transparent ">
         <form onSubmit={handleRegister} className="card-body">
           <h1 className="text-4xl font-bold text-yellow-200 text-center">
             Register

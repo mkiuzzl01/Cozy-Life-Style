@@ -26,11 +26,11 @@ const Update_Profile = () => {
     Aos.init({duration:1000});
   },[])
   return (
-    <div className="bg-green-100 my-4 rounded-lg grid grid-cols-1 md:grid-cols-2 font-PT_Sans" data-aos="zoom-in">
+    <div className="bg-green-100 my-4 py-4 rounded-lg grid grid-cols-1 lg:grid-cols-2 font-PT_Sans" data-aos="zoom-in">
       <Helmet>
         <title>Cozy-Life-Style | Update Profile </title>
       </Helmet>
-      <div className="flex flex-col items-center gap-4 border-e-2 border-white border-dashed">
+      <div className="flex flex-col items-center gap-4 border-e-2 border-green-400 border-dashed">
         <p>Current Profile</p>
         <img
           src={
@@ -59,7 +59,7 @@ const Update_Profile = () => {
         </div>
       </div>
       <div>
-        <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10">
+        <div className="flex flex-col p-6 rounded-md sm:p-10">
           <div className="mb-8 text-center">
             <h1 className="my-3 text-4xl font-bold">Profile Update</h1>
           </div>

@@ -14,7 +14,7 @@ const Root = () => {
             <ToastContainer></ToastContainer>
           </nav>
         </header>
-        <main className="max-w-7xl m-auto px-2 md:px-0 min-h-[calc(100vh-348px)]">
+        <main className="max-w-7xl m-auto px-2 lg:px-0 min-h-[calc(100vh-348px)]">
           <Outlet></Outlet>
         </main>
         <footer>

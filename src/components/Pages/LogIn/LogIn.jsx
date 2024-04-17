@@ -66,14 +66,14 @@ const LogIn = () => {
   },[])
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4 font-PT_Sans " data-aos="flip-down">
+    <div className="flex flex-col lg:flex-row md:justify-center items-center bg-slate-500 rounded-lg my-4 p-4 font-PT_Sans " data-aos="flip-down">
       <Helmet>
         <title>Cozy-Life-Style | Login </title>
       </Helmet>
       <div>
         <img src="https://i.ibb.co/ZhJ8g1h/Hands-Unlocked.png" alt="" />
       </div>
-      <div className="w-full md:w-1/3 space-y-3 rounded-xl bg-transparent text-yellow-200">
+      <div className="w-full lg:w-1/2 space-y-3 rounded-xl bg-transparent text-yellow-200">
         <form onSubmit={handleLogIn} className="card-body ">
         <h1 className="text-4xl font-bold text-center">Login</h1>
           <div className="form-control">
